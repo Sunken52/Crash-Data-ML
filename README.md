@@ -19,8 +19,8 @@ We utilized multiple tables in our Machine Learning analysis to classify fatalit
 | `Accidents_event`  | Detailed sequential data of accident            | No               |
 | `Person`           | General data on all persons involved in the accident | No            |
 | `Vehicle`          | General data on all vehicles in the accident    | Yes              |
-| `Node`             | Data on latitude and longitude of the accident  | No               |
-| `Node_ID`          | Detailed data on nodes                          | Yes              |
+| `Node`             | Data on latitude and longitude of the accident  | Yes               |
+| `NODE_ID_COMPLEX_INT_ID`          | Detailed data on nodes                          | No              |
 | `Accident_location`| Address of accidents                            | No               |
 | `Accident_chainage`| Location of accident with respect to roads      | No               |
 | `Atmospheric_cond` | Weather/atmosphere conditions                   | Yes              |
@@ -31,7 +31,7 @@ We utilized multiple tables in our Machine Learning analysis to classify fatalit
 
 ### Issues and Resolutions
 
-1. **NODE_ID Table**: There were inconsistencies in the categorization of whether a node was in an urban or rural area. This table contained duplicate entries often with conflicting information. To resolve this, we used the ABS rural indexes as a substitute.
+1. **NODE Table**: There were inconsistencies in the categorization of whether a node was in an urban or rural area. This table contained duplicate entries often with conflicting information. To resolve this, we used the ABS rural indexes as a substitute.
 
 2. **Vehicle Table**: The dataset for vehicles was initially rich but contained a significant number of null values, particularly in the 'weight of vehicle' field. These entries were removed to maintain data quality.
 
